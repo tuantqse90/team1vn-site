@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đăng ký — AvaxCats Workshop · Team1 VN</title>
+<style>
+  :root {
+    --bg: #0b0708; --panel: #150d0e; --line: #331d20;
+    --ink: #f5eced; --muted: #a89092; --dim: #725d5f;
+    --avax: #e84142; --avax-t: #ff6b6b; --avax-dim: #7c2224;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 80px; }
+  header { padding: 40px 0 10px; }
+  h1 {
+    font-family: var(--mono); font-size: 24px; letter-spacing: .1em;
+    color: var(--avax-t); margin: 0; font-weight: 700;
+  }
+  h1 .tri { color: var(--avax); }
+  .sub { color: var(--muted); font-size: 14.5px; margin-top: 8px; max-width: 62ch; }
+  .sub b { color: var(--avax-t); }
+  nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 26px; }
+  nav a {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .08em;
+    text-transform: uppercase; text-decoration: none; color: var(--avax-t);
+    border: 1px solid var(--avax-dim); border-radius: 999px; padding: 5px 14px;
+    transition: transform .1s ease, border-color .1s ease;
+  }
+  nav a:hover { transform: translateY(-1px); border-color: var(--avax); }
+  .formbox {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px; overflow: hidden;
+  }
+  .formbox iframe {
+    display: block; width: 100%; height: 78vh; min-height: 640px;
+    border: 0; border-radius: 6px; background: #fff;
+  }
+  .fallback {
+    margin-top: 14px; font-family: var(--mono); font-size: 12.5px;
+    color: var(--dim); text-align: center;
+  }
+  .fallback a { color: var(--avax-t); }
+  footer {
+    margin-top: 48px; border-top: 1px solid var(--line); padding-top: 16px;
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em;
+    color: var(--dim);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><span class="tri">▲</span> ĐĂNG KÝ WORKSHOP</h1>
+    <p class="sub"><b>Building on Avalanche</b> — mint AvaxCat đầu tiên của bạn trên Fuji testnet.
+      Điền form bên dưới để giữ chỗ · <b>Team Avalanche — Team1 VN</b> 🇻🇳</p>
+  </header>
+
+  <nav>
+    <a href="/">← Mint dApp</a>
+    <a href="/preview.html">Bộ sưu tập AvaxCats</a>
+  </nav>
+
+  <div class="formbox">
+    <iframe
+      src="https://docs.google.com/forms/d/13qQDgd8soI8o_Vh9ks1lQqdspUCwSjXaxF_KaWUwGGo/viewform?embedded=true"
+      title="Form đăng ký workshop Team1 VN"
+      loading="lazy">
+    </iframe>
+  </div>
+  <p class="fallback">Form không hiện? Mở trực tiếp:
+    <a href="https://docs.google.com/forms/d/13qQDgd8soI8o_Vh9ks1lQqdspUCwSjXaxF_KaWUwGGo/viewform"
+       target="_blank" rel="noreferrer">docs.google.com/forms → đăng ký</a></p>
+
+  <footer>▲ TEAM AVALANCHE · TEAM1 VN — team1vn.xyz</footer>
+</div>
+</body>
+</html>
