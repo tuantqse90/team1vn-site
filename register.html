@@ -2,7 +2,9 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f5f5">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0a0a0a">
 <title>Đăng ký — AvaxCats Workshop · Team1 VN</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +27,10 @@
   }
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
+  html { -webkit-tap-highlight-color: transparent; }
+  button, a, summary { touch-action: manipulation; }
+  summary { list-style: none; cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
   body {
     margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans);
     font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: clip;
@@ -53,7 +59,17 @@
   .links a:hover { color: var(--fg); }
   .grow { flex: 1; }
   .chip { border: 1px solid var(--line); padding: 6px 10px; white-space: nowrap; }
-  @media (max-width: 720px) { .links, .brand span { display: none; } }
+  .menu { display: none; }
+  .menu > summary { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 6px; color: var(--muted); }
+  .menu > summary:hover { background: var(--hover); color: var(--fg); }
+  .menu > summary svg { width: 16px; height: 16px; }
+  .menu > summary .ic-x, .menu[open] > summary .ic-menu { display: none; }
+  .menu[open] > summary .ic-x { display: block; }
+  .menu .panel { position: absolute; left: 0; right: 0; top: 56px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: var(--surface); box-shadow: 0 16px 32px rgb(0 0 0 / .12); }
+  .menu .panel a { display: flex; justify-content: space-between; align-items: center; padding: 12px 8px; font-size: 15px; color: var(--fg); text-decoration: none; }
+  .menu .panel a:hover { background: var(--hover); }
+  .menu .panel a[target]::after { content: "↗"; color: var(--muted); font-family: var(--mono); font-size: 12px; }
+  @media (max-width: 720px) { .links, .brand span { display: none; } .menu { display: block; } }
 
   .hero { position: relative; overflow: hidden; text-align: center; border-bottom: 1px solid var(--line); }
   .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(var(--line-strong) 1px, transparent 1px); background-size: 22px 22px; mask-image: radial-gradient(ellipse at 50% 40%, black 20%, transparent 72%); }
@@ -103,6 +119,17 @@
     </div>
     <span class="grow"></span>
     <span class="eyebrow chip">Workshop · Fuji</span>
+    <details class="menu">
+      <summary aria-label="Mở menu">
+        <svg class="ic-menu" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg>
+        <svg class="ic-x" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+      </summary>
+      <div class="panel">
+        <a href="/">Mint dApp</a>
+        <a href="/preview.html">Bộ sưu tập</a>
+        <a href="https://build.avax.network/?ref=HVHXK&utm_source=team1" target="_blank" rel="noreferrer">Builder Hub</a>
+      </div>
+    </details>
   </div>
 </nav>
 
